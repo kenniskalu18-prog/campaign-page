@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenis Kalu Dede - Class Representative Campaign</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --light: #f8f9fa;
+            --dark: #2c3e50;
+            --success: #2ecc71;
+            --warning: #f39c12;
+            --gradient: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+            --gradient-accent: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            --shadow-hover: 0 15px 40px rgba(0, 0, 0, 0.15);
+            --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            --border-radius: 16px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: var(--gradient);
+            color: white;
+            padding: 60px 0 80px;
+            text-align: center;
+            border-radius: 0 0 30px 30px;
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.05" d="M0,96L48,112C96,128,192,160,288,186.7C384,213,480,235,576,213.3C672,192,768,128,864,128C960,128,1056,192,1152,192C1248,192,1344,128,1392,96L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .header-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .profile-container {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 30px;
+        }
+        
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            background: white;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 70px;
+            color: var(--primary);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            border: 5px solid rgba(255, 255, 255, 0.3);
+            transition: var(--transition);
+        }
+        
+        .profile-img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        
+        .tagline {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+        
+        .level {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.8;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: var(--gradient-accent);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-top: 20px;
+            transition: var(--transition);
+            box-shadow: 0 5px 15px rgba(231, 76, 60, 0.4);
+            letter-spacing: 0.5px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: 0.5s;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(231, 76, 60, 0.5);
+        }
+        
+        .cta-button:hover::before {
+            left: 100%;
+        }
+        
+        /* Section Styles */
+        section {
+            background-color: white;
+            margin: 40px 0;
+            padding: 40px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: var(--gradient);
+            transition: var(--transition);
+        }
+        
+        section:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        section:hover::before {
+            width: 8px;
+        }
+        
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary);
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--light);
+            display: flex;
+            align-items: center;
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+        
+        h2 i {
+            margin-right: 15px;
+            color: var(--secondary);
+            background: rgba(52, 152, 219, 0.1);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .section-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+        }
+        
+        .card {
+            background-color: var(--light);
+            padding: 25px;
+            border-radius: 12px;
+            border-left: 4px solid var(--secondary);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--gradient);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.5s ease;
+        }
+        
+        .card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+        }
+        
+        .card h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+        }
+        
+        .card h3 i {
+            margin-right: 10px;
+            color: var(--secondary);
+        }
+        
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        li {
+            margin-bottom: 12px;
+            padding-left: 30px;
+            position: relative;
+        }
+        
+        li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--success);
+            font-weight: bold;
+            background: rgba(46, 204, 113, 0.1);
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+        }
+        
+        blockquote {
+            font-style: italic;
+            background: linear-gradient(to right, rgba(52, 152, 219, 0.05), rgba(231, 76, 60, 0.05));
+            padding: 25px;
+            border-radius: 12px;
+            margin: 25px 0;
+            border-left: 4px solid var(--accent);
+            position: relative;
+            font-size: 1.1rem;
+        }
+        
+        blockquote::before {
+            content: '"';
+            position: absolute;
+            top: -10px;
+            left: 10px;
+            font-size: 4rem;
+            color: rgba(231, 76, 60, 0.2);
+            font-family: Georgia, serif;
+        }
+        
+        /* Vote Section */
+        #vote {
+            text-align: center;
+            background: var(--gradient);
+            color: white;
+        }
+        
+        #vote h2 {
+            color: white;
+            border-bottom-color: rgba(255, 255, 255, 0.2);
+            justify-content: center;
+        }
+        
+        #vote h2 i {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+        }
+        
+        #vote .cta-button {
+            background: white;
+            color: var(--primary);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        #vote .cta-button:hover {
+            background: var(--light);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* Footer Styles */
+        footer {
+            background-color: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+            margin-top: 60px;
+            border-radius: 30px 30px 0 0;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .designer-credit {
+            margin-top: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .kenstack {
+            display: inline-flex;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 10px 20px;
+            border-radius: 50px;
+            margin-left: 10px;
+            transition: var(--transition);
+            cursor: pointer;
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+        }
+        
+        .kenstack:hover {
+            background-color: var(--secondary);
+            transform: scale(1.05);
+        }
+        
+        /* Floating Elements */
+        .floating {
+            position: absolute;
+            z-index: -1;
+            opacity: 0.1;
+        }
+        
+        .floating-1 {
+            top: 10%;
+            left: 5%;
+            font-size: 8rem;
+            color: var(--secondary);
+        }
+        
+        .floating-2 {
+            bottom: 10%;
+            right: 5%;
+            font-size: 6rem;
+            color: var(--accent);
+        }
+        
+        /* Animations */
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .profile-img {
+                width: 160px;
+                height: 160px;
+                font-size: 60px;
+            }
+            
+            section {
+                padding: 30px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .tagline {
+                font-size: 1.2rem;
+            }
+            
+            .profile-img {
+                width: 140px;
+                height: 140px;
+                font-size: 55px;
+            }
+            
+            section {
+                padding: 25px;
+                margin: 30px 0;
+            }
+            
+            .section-content {
+                grid-template-columns: 1fr;
+            }
+            
+            h2 {
+                font-size: 1.6rem;
+            }
+            
+            .floating {
+                display: none;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                width: 95%;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .tagline {
+                font-size: 1.1rem;
+            }
+            
+            .profile-img {
+                width: 120px;
+                height: 120px;
+                font-size: 50px;
+            }
+            
+            section {
+                padding: 20px;
+            }
+            
+            .card {
+                padding: 20px;
+            }
+            
+            .cta-button {
+                padding: 12px 30px;
+                font-size: 1rem;
+            }
+            
+            .designer-credit {
+                flex-direction: column;
+            }
+            
+            .kenstack {
+                margin-left: 0;
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="profile-container">
+                    <div class="profile-img">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                </div>
+                <h1>Kenis Kalu Dede</h1>
+                <p class="tagline">Your Candidate for Class Representative</p>
+                <p class="level">100 Level Pre-Med</p>
+                <a href="#vote" class="cta-button">Vote for Kenis</a>
+            </div>
+        </div>
+        <div class="floating floating-1"><i class="fas fa-star"></i></div>
+        <div class="floating floating-2"><i class="fas fa-heart"></i></div>
+    </header>
+    
+    <div class="container">
+        <section id="intro">
+            <h2><i class="fas fa-bullhorn"></i> My Message</h2>
+            <p><strong>Hey everyone!</strong></p>
+            <p>My name is <strong>Kenis Kalu Dede</strong>, and I'm contesting for the position of Class Rep for 100 Level Pre-Med this semester.</p>
+            <p>We're all in this together, and I genuinely want to make this year better for all of us. Let me share a few things I plan to do.</p>
+        </section>
+        
+        <section id="communication">
+            <h2><i class="fas fa-comments"></i> Communication & Accessibility</h2>
+            <div class="section-content">
+                <div class="card">
+                    <h3><i class="fas fa-door-open"></i> Open Communication</h3>
+                    <ul>
+                        <li>I'm very accessible and plan to keep communication open with everyone</li>
+                        <li>Work hand in hand with my assistant to ensure everyone's progressing</li>
+                        <li>Anonymous feedback system so everyone feels heard</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3><i class="fas fa-clock"></i> Always Available</h3>
+                    <ul>
+                        <li>You can reach me anytime on WhatsApp</li>
+                        <li>Book a time to talk if you prefer scheduled meetings</li>
+                        <li>Quick response to your questions and concerns</li>
+                    </ul>
+                </div>
+            </div>
+            <blockquote>Your voice really matters, and I'll make sure it's heard.</blockquote>
+        </section>
+        
+        <section id="academic">
+            <h2><i class="fas fa-book-open"></i> Academic Support</h2>
+            <div class="section-content">
+                <div class="card">
+                    <h3><i class="fas fa-users"></i> Study Groups & Tutoring</h3>
+                    <ul>
+                        <li>Organize study groups for toughest courses (Organic Chemistry, Biochemistry, Physics)</li>
+                        <li>Current tutor at two tutorial centers with teaching experience</li>
+                        <li>Peer tutoring system to match students who need help with those who can assist</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3><i class="fas fa-share-alt"></i> Resource Sharing</h3>
+                    <ul>
+                        <li>Shared resource bank with notes, practice exams, and study guides</li>
+                        <li>Compile past tests and make them accessible through a website</li>
+                        <li>Study groups before tests and exams so we can all succeed together</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <section id="wellness">
+            <h2><i class="fas fa-heart"></i> Mental Health & Wellness</h2>
+            <div class="section-content">
+                <div class="card">
+                    <h3><i class="fas fa-hands-helping"></i> Supportive Environment</h3>
+                    <ul>
+                        <li>I know how stressful pre-med can be — we all feel it</li>
+                        <li>Promote balance and remind everyone that while grades matter, they're not everything</li>
+                        <li>Let's look out for ourselves and for each other</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3><i class="fas fa-users"></i> Community Focus</h3>
+                    <ul>
+                        <li>Make this first year less isolating and more supportive</li>
+                        <li>Create a culture of collaboration over competition</li>
+                        <li>Regular check-ins on class morale and stress levels</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <section id="career">
+            <h2><i class="fas fa-briefcase"></i> Career & Professional Development</h2>
+            <div class="section-content">
+                <div class="card">
+                    <h3><i class="fas fa-graduation-cap"></i> Learning from Experience</h3>
+                    <ul>
+                        <li>Invite upper-level medical students like Temidayo and other seniors</li>
+                        <li>Mentorship connections with students who've walked this same path</li>
+                        <li>Learning from those ahead of us will help us find our way faster</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3><i class="fas fa-chart-line"></i> Professional Growth</h3>
+                    <ul>
+                        <li>Workshops on study techniques and time management</li>
+                        <li>Guidance on career paths and opportunities in medicine</li>
+                        <li>Networking events with medical professionals and alumni</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <section id="community">
+            <h2><i class="fas fa-users"></i> Community & Advocacy</h2>
+            <div class="section-content">
+                <div class="card">
+                    <h3><i class="fas fa-handshake"></i> Unity & Collaboration</h3>
+                    <ul>
+                        <li>Encourage unity and collaborative spirit instead of competition</li>
+                        <li>Pre-med is tough, but it shouldn't be lonely</li>
+                        <li>Be the bridge between students and faculty</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3><i class="fas fa-user-friends"></i> Student Representation</h3>
+                    <ul>
+                        <li>Address scheduling conflicts and course concerns</li>
+                        <li>Suggest improvements that can help us learn better</li>
+                        <li>Make sure every voice counts, not just the loudest ones</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <section id="why-me">
+            <h2><i class="fas fa-star"></i> Why Me?</h2>
+            <div class="section-content">
+                <div class="card">
+                    <h3><i class="fas fa-award"></i> Experience & Skills</h3>
+                    <ul>
+                        <li>Genuine passion for helping my classmates succeed</li>
+                        <li>Former Head Boy in secondary school with leadership experience</li>
+                        <li>Organized and committed to keeping everything well-ordered</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3><i class="fas fa-user-check"></i> Personal Qualities</h3>
+                    <ul>
+                        <li>Approachable, willing to listen, and responsive</li>
+                        <li>Committed to being available and accountable</li>
+                        <li>Tech-savvy with plans to implement digital solutions</li>
+                    </ul>
+                </div>
+            </div>
+            <blockquote>Pre-med is tough, but it shouldn't be lonely or cutthroat. Let's build a supportive community where everyone has the resources and encouragement to succeed. I'm not perfect, but I'm committed to doing my best for all of us.</blockquote>
+        </section>
+        
+        <section id="vote">
+            <h2><i class="fas fa-vote-yea"></i> Your Vote Matters</h2>
+            <div style="text-align: center; padding: 20px;">
+                <p style="font-size: 1.2rem; margin-bottom: 20px;">Vote for a representative who truly cares about your success and well-being.</p>
+                <p style="font-size: 1.5rem; font-weight: bold; margin-bottom: 30px;">Vote <span style="color: #ffdd59;">KENIS KALU DEDE</span> for Class Rep</p>
+                <a href="#" class="cta-button">Support My Campaign</a>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>Connect with Kenis for questions, suggestions, or just to chat!</p>
+                <div class="designer-credit">
+                    <span>Page designed by</span>
+                    <a href="https://wa.me/qr/5XXPE2NTKQGSO1" class="kenstack" target="_blank">
+                        <i class="fas fa-code"></i> KenStack
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 20,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Add interactive effects to cards
+        document.querySelectorAll('.card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px)';
+                this.style.boxShadow = '0 15px 30px rgba(0, 0, 0, 0.15)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(-5px)';
+                this.style.boxShadow = '0 10px 20px rgba(0, 0, 0, 0.08)';
+            });
+        });
+        
+        // Add animation to sections when they come into view
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
